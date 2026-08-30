@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - คู่มือการเล่น</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+        :root{
+            --bg-dark:#0f172a;--bg-card:#1e293b;--accent:#6366f1;--accent-light:#818cf8;
+            --text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#334155;
+            --gradient:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
+        }
+        body{background:var(--bg-dark);color:var(--text-primary);line-height:1.8;}
+        .neon-text{text-shadow:0 0 3px var(--accent-light),0 0 6px var(--accent);}
+        header{background:rgba(15,23,42,0.95);border-bottom:1px solid var(--border);padding:1rem 0;position:sticky;top:0;z-index:100;}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;}
+        .logo{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        nav{display:flex;gap:0.3rem;flex-wrap:wrap;}
+        .nav-link{color:var(--text-secondary);padding:0.7rem 0.9rem;text-decoration:none;border-radius:6px;transition:all 0.2s;}
+        .nav-link:hover,.nav-link.active{background:rgba(99,102,241,0.15);color:var(--accent-light);}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1.5rem;}
+        h1{font-size:2.4rem;margin-bottom:2rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .guide-section{background:var(--bg-card);padding:1.5rem;border-radius:12px;border:1px solid var(--border);margin-bottom:1.5rem;transition:0.2s;}
+        .guide-section:hover{border-color:var(--accent);box-shadow:0 0 10px rgba(99,102,241,0.1);}
+        .guide-section h3{color:var(--accent-light);margin-bottom:0.8rem;}
+        .guide-section p{color:var(--text-secondary);}
+        footer{text-align:center;padding:2rem;color:var(--text-secondary);border-top:1px solid var(--border);margin-top:3rem;}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">🎮 GameHub</div>
+        <nav>
+            <a class="nav-link" href="index.html">หน้าแรก</a>
+            <a class="nav-link" href="games.html">เกม</a>
+            <a class="nav-link" href="about.html">เกี่ยวกับเรา</a>
+            <a class="nav-link active" href="guide.html">คู่มือ</a>
+            <a class="nav-link" href="search.html">ค้นหา</a>
+            <a class="nav-link" href="contact.html">ติดต่อ</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1 class="neon-text">📖 คู่มือการเล่น</h1>
+
+    <div class="guide-section" id="gsot"><h3>GSOT</h3><p>ข้อมูลเพิ่มเติมจะมาเร็วๆ นี้ครับ</p></div>
+    <div class="guide-section" id="honkai"><h3>Honkai Impact</h3><p>เลือกวัลคิรีตามบทบาท ต่อสู้ตามจังหวะ กะทันหันหลบเพื่อปลดสถานะไร้พ่าย อัปเกรดอาวุธและการ์ดความทรงจำเพื่อเพิ่มความสามารถครับ</p></div>
+    <div class="guide-section" id="valorant"><h3>Valorant</h3><p>เล่นทีม 5v5 แบ่งฝ่ายโจมตี-ป้องกัน เลือกเอเจนต์ ซื้ออาวุธและเกราะทุกรอบ สื่อสารกัน ฝึกยิงหัวและใช้ความสามารถเสริมกลยุทธ์ครับ</p></div>
+    <div class="guide-section" id="wuwa"><h3>Wuthering Waves</h3><p>เน้นจังหวะต่อสู้และการหลบหลีกที่แม่นยำ สลับตัวละครต่อเนื่องคอมโบ เรียนรู้รูปแบบท่าศัตรูเพื่อหาจังหวะโต้กลับครับ</p></div>
+    <div class="guide-section" id="wukong"><h3>Black Myth: Wukong</h3><p>เรียนรู้ท่าออกศัตรู อดใจรอจังหวะโต้กลับ อัปเกรดค่าพลังและอุปกรณ์ ปรับชุดเกราะให้เข้ากับสไตล์ครับ</p></div>
+    <div class="guide-section" id="marvelrivals"><h3>Marvel Rivals</h3><p>เลือกฮีโร่ให้ครบ 3 บทบาท ใช้ระบบคอมโบคู่ตัวละคร ยึดพื้นที่และทำภารกิจ สื่อสารและประสานงานกับทีมครับ</p></div>
+    <div class="guide-section" id="lol"><h3>League of Legends</h3><p>เลือกเลน ฆ่าครีปเก็บเงินและค่าประสบการณ์ ซื้อไอเทมให้ถูกต้อง ดูแผนที่ย่อเสมอ ทำลายเน็กซัสฝ่ายตรงข้ามให้ได้ครับ</p></div>
+    <div class="guide-section" id="genshin"><h3>Genshin Impact</h3><p>ใช้ธาตุ 7 อย่างทำปฏิกิริยา สลับตัวละครสร้างคอมโบ อัปเกรดและจัดทีมให้เสริมกัน สำรวจแผนที่และพัฒนาอย่างสม่ำเสมอครับ</p></div>
+    <div class="guide-section" id="minecraft"><h3>Minecraft</h3><p>ขุดแร่ รวบรวมทรัพยากร สร้างบ้านตามใจ ปรับความยากตามถนัด ผจญภัยและต่อสู้กับมอนสเตอร์ พัฒนาเครื่องมือครับ</p></div>
+    <div class="guide-section" id="mlbb"><h3>Mobile Legends</h3><p>เลือกฮีโร่ตามบทบาท เล่นตามเลน ช่วยทีม ทำวัตถุประสงค์ ซื้อไอเทมให้เหมาะสม เรียนรู้จังหวะเข้า-ออกต่อสู้ครับ</p></div>
+    <div class="guide-section" id="pubg"><h3>PUBG</h3><p>ลงจอด เลือกจุดปลอดภัย รวบรวมอาวุธ เกราะ ยา เฝ้าดูวงเข้า เคลื่อนที่ทันเวลา เหลือรอดเป็นคนสุดท้ายคือผู้ชนะครับ</p></div>
+    <div class="guide-section" id="amongus"><h3>Among Us</h3><p>ฝ่ายลูกเรือ: ซ่อมยานและค้นหาคนแฝง ฝ่ายคนแฝง: กำจัดและสร้างความสับสน สังเกตพฤติกรรมและลงคะแนนจากหลักฐานครับ</p></div>
+    <div class="guide-section" id="eldenring"><h3>Elden Ring</h3><p>สำรวจโลกเปิด เรียนรู้รูปแบบท่าศัตรู อดใจรอจังหวะโจมตีกลับ อัปเกรดค่าพลังและอุปกรณ์ ค้นพบความลับครับ</p></div>
+    <div class="guide-section" id="fortnite"><h3>Fortnite</h3><p>ลงจอด รวบรวมอาวุธและวัสดุ สร้างสิ่งกีดขวาง เฝ้าดูวงเข้า เคลื่อนที่ทันเวลา ต่อสู้เพื่อเหลือรอดเป็นคนสุดท้ายครับ</p></div>
+    <div class="guide-section" id="bdo"><h3>Black Desert Online</h3><p>สำรวจโลกอันกว้างใหญ่ เรียนระบบต่อสู้ เลือกอาชีพ ทำภารกิจ พัฒนาอุปกรณ์และทักษะอย่างสม่ำเสมอครับ</p></div>
+</div>
+
+<footer>
+    <p>🎮 GameHub © 2026 | เพื่อการศึกษาเท่านั้น</p>
+</footer>
+
+</body>
+</html>

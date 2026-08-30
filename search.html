@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - ค้นหาเกม</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+        :root{
+            --bg-dark:#0f172a;--bg-card:#1e293b;--accent:#6366f1;--accent-light:#818cf8;
+            --text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#334155;
+            --gradient:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
+        }
+        body{background:var(--bg-dark);color:var(--text-primary);line-height:1.6;}
+        .neon-text{text-shadow:0 0 3px var(--accent-light),0 0 6px var(--accent);}
+        header{background:rgba(15,23,42,0.95);border-bottom:1px solid var(--border);padding:1rem 0;position:sticky;top:0;z-index:100;}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;}
+        .logo{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        nav{display:flex;gap:0.3rem;flex-wrap:wrap;}
+        .nav-link{color:var(--text-secondary);padding:0.7rem 0.9rem;text-decoration:none;border-radius:6px;transition:all 0.2s;}
+        .nav-link:hover,.nav-link.active{background:rgba(99,102,241,0.15);color:var(--accent-light);}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1.5rem;}
+        h1{font-size:2.4rem;margin-bottom:2rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .search-box{background:var(--bg-card);padding:2.5rem;border-radius:16px;border:1px solid var(--border);text-align:center;}
+        input{width:100%;max-width:400px;padding:0.9rem 1.2rem;font-size:1rem;border-radius:10px;border:2px solid var(--border);background:var(--bg-dark);color:#fff;outline:none;}
+        input:focus{border-color:var(--accent);box-shadow:0 0 8px rgba(99,102,241,0.2);}
+        .btn{display:inline-block;padding:0.75rem 1.5rem;background:var(--gradient);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;border:none;cursor:pointer;font-size:1rem;margin-top:1rem;transition:0.2s;}
+        .btn:hover{transform:translateY(-2px);}
+        .result-area{margin-top:2rem;text-align:left;}
+        .game-item{background:var(--bg-card);padding:1rem;border-radius:10px;border:1px solid var(--border);margin-bottom:0.8rem;}
+        .game-item h3{color:var(--accent-light);margin-bottom:0.3rem;}
+        .game-item p{color:var(--text-secondary);font-size:0.95rem;}
+        footer{text-align:center;padding:2rem;color:var(--text-secondary);border-top:1px solid var(--border);margin-top:3rem;}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">🎮 GameHub</div>
+        <nav>
+            <a class="nav-link" href="index.html">หน้าแรก</a>
+            <a class="nav-link" href="games.html">เกม</a>
+            <a class="nav-link" href="about.html">เกี่ยวกับเรา</a>
+            <a class="nav-link" href="guide.html">คู่มือ</a>
+            <a class="nav-link active" href="search.html">ค้นหา</a>
+            <a class="nav-link" href="contact.html">ติดต่อ</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1 class="neon-text">🔍 ค้นหาเกม</h1>
+
+    <div class="search-box">
+        <h3 style="color:var(--accent-light);margin-bottom:1rem;">พิมพ์ชื่อเกมที่ต้องการค้นหา</h3>
+        <input type="text" id="searchInput" placeholder="เช่น Valorant, PUBG...">
+        <br>
+        <button class="btn" onclick="doSearch()">🔍 ค้นหา</button>
+
+        <div class="result-area" id="resultArea">
+            <p style="text-align:center; color:var(--text-secondary); margin-top:2rem;">พิมพ์ชื่อเกมแล้วกดปุ่มค้นหาครับ</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>🎮 GameHub © 2026 | เพื่อการศึกษาเท่านั้น</p>
+</footer>
+
+<script>
+    const games = [
+        {name:'GSOT',url:'#',desc:'เกมแนวแอคชัน-ผจญภัย'},
+        {name:'Honkai Impact',url:'https://honkaiimpact3.hoyoverse.com',desc:'แอคชันสวมบทบาท ต่อสู้ด้วยวัลคิรี'},
+        {name:'Valorant',url:'https://playvalorant.com',desc:'ยิงแทคติก 5v5 มีความสามารถพิเศษ'},
+        {name:'Wuthering Waves',url:'https://wutheringwaves.kurogame.com',desc:'ต่อสู้เน้นจังหวะและการหลบหลีก'},
+        {name:'Black Myth: Wukong',url:'https://www.heishenhua.com',desc:'ตำนานไซอิ๋ว กราฟิกสวย ต่อสู้ท้าทาย'},
+        {name:'Marvel Rivals',url:'https://marvelrivals.com',desc:'ฮีโร่มาร์เวลต่อสู้กัน 6v6'},
+        {name:'League of Legends',url:'https://www.leagueoflegends.com',desc:'MOBA 5v5 ต่อสู้ทำลายฐาน'},
+        {name:'Genshin Impact',url:'https://genshin.hoyoverse.com',desc:'ผจญภัยโลกแฟนตาซี ใช้พลังธาตุ'},
+        {name:'Minecraft',url:'https://www.minecraft.net',desc:'ขุด สร้าง ผจญภัยได้อิสระ'},
+        {name:'Mobile Legends',url:'https://m.mobilelegends.com',desc:'MOBA บนมือถือยอดฮิต'},
+        {name:'PUBG',url:'https://www.pubg.com',desc:'Battle Royale เหลือรอดเป็นคนสุดท้าย'},
+        {name:'Among Us',url:'https://innersloth.com/gameAmongUs.php',desc:'ค้นหาคนแฝงในกลุ่ม'},
+        {name:'Elden Ring',url:'https://en.bandainamcoent.eu/elden-ring/elden-ring',desc:'แอคชันผจญภัยที่ท้าทาย'},
+        {name:'Fortnite',url:'https://www.fortnite.com',desc:'สร้างและต่อสู้บนเกาะ'},
+        {name:'Black Desert Online',url:'https://www.blackdesertonline.com',desc:'โลกเปิดกว้าง ต่อสู้และใช้ชีวิต'}
+    ];
+
+    function doSearch(){
+        const kw = document.getElementById('searchInput').value.trim().toLowerCase();
+        const area = document.getElementById('resultArea');
+        if(!kw){area.innerHTML='<p style="text-align:center; color:var(--text-secondary); margin-top:2rem;">กรุณาพิมพ์ชื่อเกมครับ</p>';return;}
+        const found = games.filter(g=>g.name.toLowerCase().includes(kw));
+        if(found.length===0){area.innerHTML='<p style="text-align:center; color:#ff6b6b; margin-top:2rem;">❌ ไม่พบเกมที่ตรงกับ "'+kw+'"</p>';return;}

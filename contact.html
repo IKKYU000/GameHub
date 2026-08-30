@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - ติดต่อเรา</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+        :root{
+            --bg-dark:#0f172a;--bg-card:#1e293b;--accent:#6366f1;--accent-light:#818cf8;
+            --text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#334155;
+            --gradient:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
+        }
+        body{background:var(--bg-dark);color:var(--text-primary);line-height:1.6;}
+        .neon-text{text-shadow:0 0 3px var(--accent-light),0 0 6px var(--accent);}
+        header{background:rgba(15,23,42,0.95);border-bottom:1px solid var(--border);padding:1rem 0;position:sticky;top:0;z-index:100;}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;}
+        .logo{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        nav{display:flex;gap:0.3rem;flex-wrap:wrap;}
+        .nav-link{color:var(--text-secondary);padding:0.7rem 0.9rem;text-decoration:none;border-radius:6px;transition:all 0.2s;}
+        .nav-link:hover,.nav-link.active{background:rgba(99,102,241,0.15);color:var(--accent-light);}
+        .container{max-width:600px;margin:0 auto;padding:2rem 1.5rem;}
+        h1{font-size:2.4rem;margin-bottom:1rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        p{color:var(--text-secondary);margin-bottom:2rem;}
+        .contact-form{background:var(--bg-card);padding:2rem;border-radius:16px;border:1px solid var(--border);}
+        .form-group{margin-bottom:1.2rem;}
+        label{display:block;margin-bottom:0.5rem;color:var(--accent-light);font-weight:500;}
+        input,textarea{width:100%;padding:0.9rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--bg-dark);color:#fff;font-size:1rem;outline:none;}
+        input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 8px rgba(99,102,241,0.2);}
+        textarea{min-height:140px;resize:vertical;}
+        .btn{display:inline-block;width:100%;padding:0.9rem;background:var(--gradient);color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:0.2s;}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(99,102,241,0.25);}
+        footer{text-align:center;padding:2rem;color:var(--text-secondary);border-top:1px solid var(--border);margin-top:3rem;}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">🎮 GameHub</div>
+        <nav>
+            <a class="nav-link" href="index.html">หน้าแรก</a>
+            <a class="nav-link" href="games.html">เกม</a>
+            <a class="nav-link" href="about.html">เกี่ยวกับเรา</a>
+            <a class="nav-link" href="guide.html">คู่มือ</a>
+            <a class="nav-link" href="search.html">ค้นหา</a>
+            <a class="nav-link active" href="contact.html">ติดต่อ</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1 class="neon-text">📬 ติดต่อเรา</h1>
+    <p>หากมีเกมที่ต้องการให้เพิ่มลงในเว็บ หรือมีข้อเสนอแนะ แจ้งผ่านฟอร์มด้านล่างได้เลยครับ</p>
+
+    <div class="contact-form">
+        <div class="form-group">
+            <label>ชื่อของคุณ</label>
+            <input type="text" id="contactName" placeholder="กรอกชื่อของคุณ">
+        </div>
+        <div class="form-group">
+            <label>หัวข้อ</label>
+            <input type="text" id="contactSubject" placeholder="แนะนำเกม / แจ้งปัญหา / อื่นๆ">
+        </div>
+        <div class="form-group">
+            <label>รายละเอียด</label>
+            <textarea id="contactMsg" placeholder="แจ้งรายละเอียดที่ต้องการแจ้งให้ทราบ..."></textarea>
+        </div>
+        <button class="btn" onclick="submitContact()">✉️ ส่งข้อความ</button>
+    </div>
+</div>
+
+<footer>
+    <p>🎮 GameHub © 2026 | เพื่อการศึกษาเท่านั้น</p>
+</footer>
+
+<script>
+    function submitContact() {
+        const name = document.getElementById('contactName').value.trim();
+        const subject = document.getElementById('contactSubject').value.trim();
+        const msg = document.getElementById('contactMsg').value.trim();
+
+        if (!name) {
+            alert('กรุณากรอกชื่อของคุณครับ');
+            return;
+        }
+        if (!msg) {
+            alert('กรุณากรอกรายละเอียดข้อความครับ');
+            return;
+        }
+
+        alert('✅ ส่งข้อความเรียบร้อยแล้วครับ!\nขอบคุณสำหรับข้อเสนอแนะนะครับ 😊');
+
+        // ล้างฟอร์มหลังส่ง
+        document.getElementById('contactName').value = '';
+        document.getElementById('contactSubject').value = '';
+        document.getElementById('contactMsg').value = '';
+    }
+</script>
+
+</body>
+</html>

@@ -20,20 +20,16 @@
         .nav-link{color:var(--text-secondary);padding:0.7rem 0.9rem;text-decoration:none;border-radius:6px;transition:all 0.2s;}
         .nav-link:hover,.nav-link.active{background:rgba(99,102,241,0.15);color:var(--accent-light);}
         .container{max-width:1200px;margin:0 auto;padding:2rem 1.5rem;}
-        h1{font-size:2.4rem;margin-bottom:1.5rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-        p{color:var(--text-secondary);margin-bottom:1.5rem;}
-        .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
-        .game-card{background:var(--bg-card);border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:0.3s;}
-        .game-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 10px 20px rgba(99,102,241,0.15);}
-        .game-card-img{height:170px;background:var(--gradient);}
-        .game-card-img img{width:100%;height:100%;object-fit:cover;}
-        .game-card-body{padding:1.3rem;}
-        .game-card h3{font-size:1.2rem;margin-bottom:0.6rem;color:var(--accent-light);}
-        .game-card p{font-size:0.95rem;}
-        .btn{display:inline-block;padding:0.6rem 1.2rem;background:var(--gradient);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;margin:0.3rem 0.3rem 0 0;transition:0.2s;}
+        h1{font-size:2.4rem;margin-bottom:2rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.8rem;}
+        .game-card{background:var(--bg-card);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:transform 0.3s,box-shadow 0.3s;}
+        .game-card:hover{transform:translateY(-8px);box-shadow:0 12px 25px rgba(99,102,241,0.2);border-color:var(--accent);}
+        .game-card img{width:100%;height:180px;object-fit:cover;}
+        .game-card-content{padding:1.2rem;}
+        .game-card h3{font-size:1.25rem;margin-bottom:0.6rem;color:var(--accent-light);}
+        .game-card p{color:var(--text-secondary);font-size:0.95rem;margin-bottom:1rem;}
+        .btn{display:inline-block;padding:0.6rem 1.2rem;background:var(--gradient);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;transition:0.2s;}
         .btn:hover{transform:translateY(-2px);}
-        .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent-light);}
-        .btn-outline:hover{background:var(--accent);color:#fff;}
         footer{text-align:center;padding:2rem;color:var(--text-secondary);border-top:1px solid var(--border);margin-top:3rem;}
     </style>
 </head>
@@ -54,25 +50,119 @@
 </header>
 
 <div class="container">
-    <h1 class="neon-text">🎲 รายการเกมทั้งหมด</h1>
-    <p>คลิก "เข้าเว็บหลัก" เพื่อไปยังเว็บไซต์ทางการ หรือดู "คู่มือ" วิธีเล่นครับ</p>
+    <h1 class="neon-text">🎮 รายการเกมทั้งหมด</h1>
 
     <div class="games-grid">
-        <div class="game-card"><div class="game-card-img"><img src="img/gsot.jpg" alt="GSOT"></div><div class="game-card-body"><h3>GSOT</h3><p>เกมแนวแอคชัน-ผจญภัยสุดเข้มข้น</p><a href="#" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#gsot" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/honkai.jpg" alt="Honkai Impact"></div><div class="game-card-body"><h3>Honkai Impact</h3><p>ต่อสู้ด้วยวัลคิรีและท่าไม้ตายสุดอลังการ</p><a href="https://honkaiimpact3.hoyoverse.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#honkai" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/valo.jpg" alt="Valorant"></div><div class="game-card-body"><h3>Valorant</h3><p>ยิงแนวแทคติก 5v5 มีความสามารถพิเศษ</p><a href="https://playvalorant.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#valorant" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/wuwa.jpg" alt="Wuthering Waves"></div><div class="game-card-body"><h3>Wuthering Waves</h3><p>ต่อสู้เน้นจังหวะและการหลบหลีก</p><a href="https://wutheringwaves.kurogame.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#wuwa" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/blackmythwukong.jpg" alt="Black Myth: Wukong"></div><div class="game-card-body"><h3>Black Myth: Wukong</h3><p>ตำนานไซอิ๋ว กราฟิกสวย ต่อสู้ท้าทาย</p><a href="https://www.heishenhua.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#wukong" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/marvelrivals.jpg" alt="Marvel Rivals"></div><div class="game-card-body"><h3>Marvel Rivals</h3><p>ฮีโร่มาร์เวลต่อสู้กัน 6v6 คอมโบทีมได้</p><a href="https://marvelrivals.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#marvelrivals" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/league-of-legends.webp" alt="League of Legends"></div><div class="game-card-body"><h3>League of Legends</h3><p>MOBA 5v5 ต่อสู้ทำลายฐานคู่แข่ง</p><a href="https://www.leagueoflegends.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#lol" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/Genshin.jpg" alt="Genshin Impact"></div><div class="game-card-body"><h3>Genshin Impact</h3><p>ผจญภัยโลกแฟนตาซี ใช้พลังธาตุ</p><a href="https://genshin.hoyoverse.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#genshin" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/minecraft.jpg" alt="Minecraft"></div><div class="game-card-body"><h3>Minecraft</h3><p>ขุด สร้าง ผจญภัยได้อย่างอิสระ</p><a href="https://www.minecraft.net" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#minecraft" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/mlbb.jpg" alt="Mobile Legends"></div><div class="game-card-body"><h3>Mobile Legends</h3><p>MOBA บนมือถือยอดฮิต เล่นได้ทุกที่</p><a href="https://m.mobilelegends.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#mlbb" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/Pubg.jpg" alt="PUBG"></div><div class="game-card-body"><h3>PUBG</h3><p>Battle Royale รวบรวมอาวุธ เหลือรอดเป็นคนสุดท้าย</p><a href="https://www.pubg.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#pubg" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/amongus.jpg" alt="Among Us"></div><div class="game-card-body"><h3>Among Us</h3><p>เกมปาร์ตี้ไขปริศนา ค้นหาคนแฝงในกลุ่ม</p><a href="https://innersloth.com/gameAmongUs.php" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#amongus" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/eldenring.jpg" alt="Elden Ring"></div><div class="game-card-body"><h3>Elden Ring</h3><p>แอคชันผจญภัยโลกแฟนตาซี ท้าทายสุดขีด</p><a href="https://en.bandainamcoent.eu/elden-ring/elden-ring" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#eldenring" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/Fortnite.jpg" alt="Fortnite"></div><div class="game-card-body"><h3>Fortnite</h3><p>Battle Royale สร้างสิ่งกีดขวางและต่อสู้</p><a href="https://www.fortnite.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#fortnite" class="btn btn-outline">📖 คู่มือ</a></div></div>
-        <div class="game-card"><div class="game-card-img"><img src="img/black desert online.jpg" alt="Black Desert Online"></div><div class="game-card-body"><h3>Black Desert Online</h3><p>โลกเปิดกว้าง ต่อสู้และใช้ชีวิตได้อย่างอิสระ</p><a href="https://www.blackdesertonline.com" target="_blank" class="btn">🌐 เข้าเว็บหลัก</a><a href="guide.html#bdo" class="btn btn-outline">📖 คู่มือ</a></div></div>
+
+        <!-- ✅ เพิ่ม Apex Legends ที่ด้านบนสุด -->
+        <div class="game-card">
+            <img src="img/Apex.jpg" alt="Apex Legends">
+            <div class="game-card-content">
+                <h3>Apex Legends</h3>
+                <p>เกมแนว Battle Royale ต่อสู้ด้วยตัวละครที่มีความสามารถพิเศษ เพื่อความเป็นหนึ่ง</p>
+                <a href="https://www.ea.com/games/apex-legends" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/gsot.jpg" alt="GSOT">
+            <div class="game-card-content">
+                <h3>GSOT</h3>
+                <p>เกมแนวแอคชัน-ผจญภัยที่เต็มไปด้วยเรื่องราวและการต่อสู้ที่ท้าทาย</p>
+                <a href="#" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/honkai.jpg" alt="Honkai Impact">
+            <div class="game-card-content">
+                <h3>Honkai Impact</h3>
+                <p>เกมแอคชันสวมบทบาท ต่อสู้กับศัตรูด้วยทีมวัลคิรีผู้ทรงพลัง</p>
+                <a href="https://honkaiimpact3.hoyoverse.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/valo.jpg" alt="Valorant">
+            <div class="game-card-content">
+                <h3>Valorant</h3>
+                <p>เกมยิงแทคติก 5v5 ผสมความสามารถพิเศษและความแม่นยำในการยิง</p>
+                <a href="https://playvalorant.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/wuwa.jpg" alt="Wuthering Waves">
+            <div class="game-card-content">
+                <h3>Wuthering Waves</h3>
+                <p>เกมแอคชันโลกเปิด เน้นจังหวะการต่อสู้และการหลบหลีกที่รวดเร็ว</p>
+                <a href="https://wutheringwaves.kurogame.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/marvelrivals.jpg" alt="Marvel Rivals">
+            <div class="game-card-content">
+                <h3>Marvel Rivals</h3>
+                <p>ฮีโร่มาร์เวลต่อสู้กัน 6v6 ร่วมทีมและใช้ความสามารถร่วมกัน</p>
+                <a href="https://marvelrivals.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/league-of-legends.webp" alt="League of Legends">
+            <div class="game-card-content">
+                <h3>League of Legends</h3>
+                <p>เกม MOBA 5v5 ต่อสู้บนแผนที่ ทำลายฐานฝ่ายตรงข้ามให้ได้</p>
+                <a href="https://www.leagueoflegends.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/Genshin.jpg" alt="Genshin Impact">
+            <div class="game-card-content">
+                <h3>Genshin Impact</h3>
+                <p>ผจญภัยในโลกแฟนตาซี ใช้พลังธาตุและตัวละครหลากสไตล์</p>
+                <a href="https://genshin.hoyoverse.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/mlbb.jpg" alt="Mobile Legends">
+            <div class="game-card-content">
+                <h3>Mobile Legends</h3>
+                <p>เกม MOBA บนมือถือยอดฮิต ต่อสู้ 5v5 ควบคุมง่ายเล่นได้ทุกที่</p>
+                <a href="https://m.mobilelegends.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/Pubg.jpg" alt="PUBG">
+            <div class="game-card-content">
+                <h3>PUBG</h3>
+                <p>เกมแนว Battle Royale เหลือรอดเป็นคนสุดท้ายบนเกาะที่มีผู้เล่น 100 คน</p>
+                <a href="https://www.pubg.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/Fortnite.jpg" alt="Fortnite">
+            <div class="game-card-content">
+                <h3>Fortnite</h3>
+                <p>เกมต่อสู้เอาตัวรอดที่สร้างสิ่งปลูกสร้างได้ไปพร้อมกัน</p>
+                <a href="https://www.fortnite.com" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="img/Eldenring.jpg" alt="Elden Ring">
+            <div class="game-card-content">
+                <h3>Elden Ring</h3>
+                <p>แอคชันผจญภัยที่ท้าทายจากผู้สร้าง Dark Souls ผสานเรื่องราวของจอร์จ อาร์.อาร์.มาร์ติน</p>
+                <a href="https://www.bandainamcoent.com/games/elden-ring" target="_blank" class="btn">เข้าเว็บหลัก</a>
+            </div>
+        </div>
+
     </div>
 </div>
 
